@@ -16,37 +16,47 @@ config_cocoapods_spm(
   default_macro_config: "debug"
 )
 
-target "EX" do
-  pod "Logger", :path => "LocalPods/Logger"
-  pod "CommonUI", :path => "LocalPods/CommonUI"
-  pod "Services", :path => "LocalPods/Services"
-  pod "Orcam", :macro => {
-    :git => "https://github.com/trinhngocthuyen/orcam.git",
-    :branch => "main"
-  }
-  pod "MacroCodableKit", :macro => {
-    :git => "https://github.com/mikhailmaslo/macro-codable-kit",
-    :tag => "0.3.0"
-  }
-
-  spm_pkg "SnapKit",
-          :url => "https://github.com/SnapKit/SnapKit.git",
-          :version => "5.7.1",
-          :products => ["SnapKit-Dynamic"]
-  spm_pkg "SwiftUIX", :git => "https://github.com/SwiftUIX/SwiftUIX.git", :tag => "0.1.9"
-  spm_pkg "SwiftyBeaver", :git => "https://github.com/SwiftyBeaver/SwiftyBeaver.git", :tag => "2.0.0"
-  spm_pkg "opentelemetry-swift",
-          :git => "https://github.com/open-telemetry/opentelemetry-swift.git",
+def spm_pods
+  spm_pkg "SamplePackageA",
+          :git => "https://github.com/kalub92/SamplePackageA.git",
           :branch => "main",
-          :products => ["OpenTelemetrySdk"]
-  spm_pkg "GoogleMaps",
-          :git => "https://github.com/googlemaps/ios-maps-sdk.git",
-          :version => "8.4.0",
-          :products => ["GoogleMaps", "GoogleMapsBase", "GoogleMapsCore"]
-  spm_pkg "DebugKit", :path => "LocalPackages/debug-kit"
+          :linkage => :static,
+          :linking => {
+            # Prefer adding products to the "Link Binary With Libraries" section
+            :use_default_xcode_linking => true,
+            :linker_flags => ["-ld_classic"]
+          }
 end
 
-target "EXTests" do
+abstract_target 'Example' do
+
+  spm_pods
+
+  target "EX" do
+    pod "Logger", :path => "LocalPods/Logger"
+    # pod "CommonUI", :path => "LocalPods/CommonUI"
+    # pod "Services", :path => "LocalPods/Services"
+
+    spm_pkg "SnapKit",
+            :url => "https://github.com/SnapKit/SnapKit.git",
+            :version => "5.7.1",
+            :products => ["SnapKit-Dynamic"]
+    spm_pkg "SwiftUIX", :git => "https://github.com/SwiftUIX/SwiftUIX.git", :tag => "0.1.9"
+    spm_pkg "SwiftyBeaver", :git => "https://github.com/SwiftyBeaver/SwiftyBeaver.git", :tag => "2.0.0"
+    spm_pkg "opentelemetry-swift",
+            :git => "https://github.com/open-telemetry/opentelemetry-swift.git",
+            :branch => "main",
+            :products => ["OpenTelemetrySdk"]
+    spm_pkg "GoogleMaps",
+            :git => "https://github.com/googlemaps/ios-maps-sdk.git",
+            :version => "8.4.0",
+            :products => ["GoogleMaps", "GoogleMapsBase", "GoogleMapsCore"]
+    spm_pkg "DebugKit", :path => "LocalPackages/debug-kit"
+  end
+  
+  target "EXTests" do
+
+  end
 
 end
 
