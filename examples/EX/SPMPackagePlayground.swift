@@ -1,16 +1,12 @@
-import MacroCodableKit
 
 import DebugKit
 import GoogleMaps
 import NetworkLogger
 import OpenTelemetrySdk
-import Orcam
 import SnapKit
 import SwiftUIX
 import SwiftyBeaver
 
-@AllOfCodable // MacroCodableKit
-@Init // Orcam
 struct Foo {
   let x: Int
 
