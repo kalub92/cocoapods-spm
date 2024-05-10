@@ -20,22 +20,20 @@ def spm_pods
   spm_pkg "SamplePackageA",
           :git => "https://github.com/kalub92/SamplePackageA.git",
           :branch => "withHyphenatedDependency",
-          :linkage => :static,
           :linking => {
             # Prefer adding products to the "Link Binary With Libraries" section
-            :use_default_xcode_linking => true,
             :linker_flags => ["-ld_classic"]
           }
 end
 
 abstract_target 'Example' do
 
-  spm_pods
-
   target "EX" do
     pod "Logger", :path => "LocalPods/Logger"
-    # pod "CommonUI", :path => "LocalPods/CommonUI"
+    pod "TestKit", :path => "LocalPods/TestKit"
     # pod "Services", :path => "LocalPods/Services"
+
+    spm_pods
 
     spm_pkg "SnapKit",
             :url => "https://github.com/SnapKit/SnapKit.git",

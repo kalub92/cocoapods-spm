@@ -1,15 +1,20 @@
 PODS:
   - Logger (0.0.1)
+  - TestKit (0.0.1)
 
 DEPENDENCIES:
   - Logger (from `LocalPods/Logger`)
+  - TestKit (from `LocalPods/TestKit`)
 
 EXTERNAL SOURCES:
   Logger:
     :path: LocalPods/Logger
+  TestKit:
+    :path: LocalPods/TestKit
 
 SPEC CHECKSUMS:
   Logger: f90a618a457baad1c3f3ee831c723b0b76dc62a8
+  TestKit: 8d4b4ef5de3be9c1a4c4fc66f070052b0ae926ff
 
 PODFILE CHECKSUM: dummy-checksum-to-prevent-merge-conflicts
 
