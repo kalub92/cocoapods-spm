@@ -19,11 +19,7 @@ config_cocoapods_spm(
 def spm_pods
   spm_pkg "SamplePackageA",
           :git => "https://github.com/kalub92/SamplePackageA.git",
-          :branch => "withHyphenatedDependency",
-          :linking => {
-            # Prefer adding products to the "Link Binary With Libraries" section
-            :linker_flags => ["-ld_classic"]
-          }
+          :branch => "withHyphenatedDependency"
 end
 
 abstract_target 'Example' do
