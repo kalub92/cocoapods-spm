@@ -19,18 +19,18 @@ config_cocoapods_spm(
 def spm_pods
   spm_pkg "SamplePackageA",
           :git => "https://github.com/kalub92/SamplePackageA.git",
-          :branch => "withHyphenatedDependency"
+          :branch => "withHyphenatedDependency",
+          :linking => {
+            :linker_flags => ["-ld_classic"]
+          }
 end
 
 abstract_target 'Example' do
 
   target "EX" do
     pod "Logger", :path => "LocalPods/Logger"
-    pod "TestKit", :path => "LocalPods/TestKit"
     # pod "Services", :path => "LocalPods/Services"
-
-    spm_pods
-
+  
     spm_pkg "SnapKit",
             :url => "https://github.com/SnapKit/SnapKit.git",
             :version => "5.7.1",
@@ -49,10 +49,14 @@ abstract_target 'Example' do
   end
   
   target "EXTests" do
-
+  
+    spm_pods
+  
+    pod "TestKit", :path => "LocalPods/TestKit"
   end
 
 end
+
 
 post_install do |installer|
   installer.pods_project.targets.each do |target|

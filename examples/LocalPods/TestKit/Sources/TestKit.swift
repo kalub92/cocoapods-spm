@@ -1,3 +1,7 @@
 import SamplePackageA
 
-public struct TestKitStruct {}
+public struct TestKitStruct {
+    init() {
+        print(SamplePackageA.sample)
+    }
+}
