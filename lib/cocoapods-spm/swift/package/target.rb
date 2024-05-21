@@ -88,7 +88,10 @@ module Pod
           return nil unless binary?
 
           @binary_basename ||= begin
-            paths = (root.artifacts_dir / name).glob("*.xcframework/*/*.{a,framework}")
+            xcframework_dir ||= (root.artifacts_dir / name).glob("*.xcframework")[0]
+            xcframework_dir ||= root.src_dir / raw["path"] if raw.key?("path")
+            paths = xcframework_dir.glob("*/*.{a,framework}")
+            UI.warn "Cannot detect binary_basename for #{name}" if paths.empty?
             paths[0].basename.to_s unless paths.empty?
           end
         end
