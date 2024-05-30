@@ -6,13 +6,17 @@ let package = Package(
   products: [
     .library(name: "DebugKit", targets: ["DebugKit"]),
   ],
-  dependencies: [],
+  dependencies: [
+    .package(path: "../core-utils"),
+  ],
   targets: [
     .target(
       name: "DebugKit",
       dependencies: [
         "DebugKitObjC",
         "NetworkLoggerFramework",
+        "NetworkInterceptorFramework",
+        .product(name: "Swizzler", package: "core-utils"),
       ],
       resources: [
         .copy("Resources/DebugKit.trace"),
@@ -20,5 +24,6 @@ let package = Package(
     ),
     .target(name: "DebugKitObjC"),
     .binaryTarget(name: "NetworkLoggerFramework", path: "Frameworks/NetworkLogger.xcframework.zip"),
+    .binaryTarget(name: "NetworkInterceptorFramework", path: "Frameworks/NetworkInterceptor.xcframework"),
   ]
 )
