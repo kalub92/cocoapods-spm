@@ -11,12 +11,10 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   AppTestKit:
-    :linkage: :static
     :path: LocalPods/AppTestKit
   Logger:
     :path: LocalPods/Logger
   NetworkTestKit:
-    :linkage: :static
     :path: LocalPods/NetworkTestKit
 
 SPEC CHECKSUMS:
