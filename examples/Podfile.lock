@@ -1,40 +1,28 @@
 PODS:
-  - CommonUI (0.0.1):
-    - Orcam
+  - AppTestKit (0.0.1):
+    - NetworkTestKit
   - Logger (0.0.1)
-  - MacroCodableKit (0.0.1)
-  - Orcam (0.0.1)
-  - Services (0.0.1):
-    - Logger
-    - Orcam
+  - NetworkTestKit (0.0.1)
 
 DEPENDENCIES:
-  - CommonUI (from `LocalPods/CommonUI`)
+  - AppTestKit (from `LocalPods/AppTestKit`)
   - Logger (from `LocalPods/Logger`)
-  - MacroCodableKit (from `.spm.pods/macros/MacroCodableKit`)
-  - Orcam (from `.spm.pods/macros/Orcam`)
-  - Services (from `LocalPods/Services`)
+  - NetworkTestKit (from `LocalPods/NetworkTestKit`)
 
 EXTERNAL SOURCES:
-  CommonUI:
-    :path: LocalPods/CommonUI
+  AppTestKit:
+    :linkage: :static
+    :path: LocalPods/AppTestKit
   Logger:
     :path: LocalPods/Logger
-  MacroCodableKit:
-    :path: !ruby/object:Pathname
-    path: ".spm.pods/macros/MacroCodableKit"
-  Orcam:
-    :path: !ruby/object:Pathname
-    path: ".spm.pods/macros/Orcam"
-  Services:
-    :path: LocalPods/Services
+  NetworkTestKit:
+    :linkage: :static
+    :path: LocalPods/NetworkTestKit
 
 SPEC CHECKSUMS:
-  CommonUI: 5631709bb785fcd324b62c95ad0025e853f474c1
+  AppTestKit: f821d3ff20c4a77c2b1de595afa4fb0b798d4b06
   Logger: f90a618a457baad1c3f3ee831c723b0b76dc62a8
-  MacroCodableKit: 29a3a48508c673918521ef5db6f1485db2ca75d0
-  Orcam: 288b7e3fc07e33706ceab2f226e4177e99847143
-  Services: 26a2771eb62bb08c99196340bf07615adc704b92
+  NetworkTestKit: 5445ea4a065ef6a16dbb89120ad36f670e356629
 
 PODFILE CHECKSUM: dummy-checksum-to-prevent-merge-conflicts
 

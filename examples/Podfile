@@ -48,7 +48,8 @@ abstract_target 'Example' do
   end
   
   target "EXTests" do
-    pod "TestKit", :path => "LocalPods/TestKit"
+    pod "NetworkTestKit", :path => "LocalPods/NetworkTestKit"
+    pod "AppTestKit", :path => "LocalPods/AppTestKit"
   end
 
 end

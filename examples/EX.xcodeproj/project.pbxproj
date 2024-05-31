@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09E3BA1D02799BB1587534CD /* Pods_Example_EXTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F149B60C44CD6898FD67FF7D /* Pods_Example_EXTests.framework */; };
+		5D57CFA509AFD8E710592631 /* Pods_EXTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593040809F1B3EA339087A41 /* Pods_EXTests.framework */; };
 		ACF313147CA4F13E05724691 /* Pods_Example_EX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7C8E852768153C37BB78B32 /* Pods_Example_EX.framework */; };
 		F522B5652B280C89009730B4 /* SPMPackagePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = F522B5642B280C89009730B4 /* SPMPackagePlayground.swift */; };
 		F5823AD12BB9575F0054FF0A /* EXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5823AD02BB9575F0054FF0A /* EXTests.swift */; };
@@ -34,6 +34,7 @@
 		292B97E176311645335E1BE2 /* Pods-Example-EXTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-EXTests.debug.xcconfig"; path = "Target Support Files/Pods-Example-EXTests/Pods-Example-EXTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3136EB0EDE6D5179967E3ACA /* Pods-EXTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EXTests.release.xcconfig"; path = "Target Support Files/Pods-EXTests/Pods-EXTests.release.xcconfig"; sourceTree = "<group>"; };
 		49D03396FFE3AAAECAD8156E /* Pods-Example-EX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-EX.debug.xcconfig"; path = "Target Support Files/Pods-Example-EX/Pods-Example-EX.debug.xcconfig"; sourceTree = "<group>"; };
+		593040809F1B3EA339087A41 /* Pods_EXTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EXTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8108CB7BE3EE60E90A38A9EB /* Pods-Example-EX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-EX.release.xcconfig"; path = "Target Support Files/Pods-Example-EX/Pods-Example-EX.release.xcconfig"; sourceTree = "<group>"; };
 		9CA8EB905635FE11BEEC47DF /* Pods-Example-EXTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-EXTests.release.xcconfig"; path = "Target Support Files/Pods-Example-EXTests/Pods-Example-EXTests.release.xcconfig"; sourceTree = "<group>"; };
 		B6B228B03A231C4EC3C73B4F /* Pods-EXTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EXTests.debug.xcconfig"; path = "Target Support Files/Pods-EXTests/Pods-EXTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -41,7 +42,6 @@
 		D572DB70C2E7F8B16ABC9252 /* Pods-EX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EX.debug.xcconfig"; path = "Target Support Files/Pods-EX/Pods-EX.debug.xcconfig"; sourceTree = "<group>"; };
 		D686D8252BF3CD90004FF8CB /* TestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCFC994A44F15042588380D4 /* Pods-EX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EX.release.xcconfig"; path = "Target Support Files/Pods-EX/Pods-EX.release.xcconfig"; sourceTree = "<group>"; };
-		F149B60C44CD6898FD67FF7D /* Pods_Example_EXTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_EXTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F522B5642B280C89009730B4 /* SPMPackagePlayground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPMPackagePlayground.swift; sourceTree = "<group>"; };
 		F5823ACE2BB9575F0054FF0A /* EXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5823AD02BB9575F0054FF0A /* EXTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXTests.swift; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09E3BA1D02799BB1587534CD /* Pods_Example_EXTests.framework in Frameworks */,
+				5D57CFA509AFD8E710592631 /* Pods_EXTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +95,7 @@
 			children = (
 				D686D8252BF3CD90004FF8CB /* TestKit.framework */,
 				C7C8E852768153C37BB78B32 /* Pods_Example_EX.framework */,
-				F149B60C44CD6898FD67FF7D /* Pods_Example_EXTests.framework */,
+				593040809F1B3EA339087A41 /* Pods_EXTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -276,7 +276,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Example-EXTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-EXTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -306,15 +306,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Example-EXTests/Pods-Example-EXTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-EXTests/Pods-EXTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Example-EXTests/Pods-Example-EXTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-EXTests/Pods-EXTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Example-EXTests/Pods-Example-EXTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EXTests/Pods-EXTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FFDBDB154B37ACC9D9172FE9 /* [CP] Check Pods Manifest.lock */ = {
@@ -376,7 +376,7 @@
 /* Begin XCBuildConfiguration section */
 		F5823AD42BB9575F0054FF0A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 292B97E176311645335E1BE2 /* Pods-Example-EXTests.debug.xcconfig */;
+			baseConfigurationReference = B6B228B03A231C4EC3C73B4F /* Pods-EXTests.debug.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -411,7 +411,7 @@
 		};
 		F5823AD52BB9575F0054FF0A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9CA8EB905635FE11BEEC47DF /* Pods-Example-EXTests.release.xcconfig */;
+			baseConfigurationReference = 3136EB0EDE6D5179967E3ACA /* Pods-EXTests.release.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				BUNDLE_LOADER = "$(TEST_HOST)";

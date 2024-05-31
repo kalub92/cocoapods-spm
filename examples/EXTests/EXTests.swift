@@ -1,5 +1,5 @@
 import XCTest
-import TestKit
+import AppTestKit
 
 final class EXTests: XCTestCase {
   func testExample() {}
