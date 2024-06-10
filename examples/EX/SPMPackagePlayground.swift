@@ -1,5 +1,6 @@
 import MacroCodableKit
 
+import BrazeKit
 import DebugKit
 import GoogleMaps
 import NetworkLogger

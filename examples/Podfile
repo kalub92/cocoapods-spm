@@ -29,6 +29,10 @@ target "EX" do
     :tag => "0.3.0"
   }
 
+  spm_pkg "braze-segment-swift",
+          :url => "https://github.com/braze-inc/braze-segment-swift.git",
+          :version => "2.2.0"
+
   spm_pkg "SnapKit",
           :url => "https://github.com/SnapKit/SnapKit.git",
           :version => "5.7.1",
