@@ -1,5 +1,9 @@
 import MacroCodableKit
 
+import Firebase
+import FirebaseAnalytics
+import FirebaseCrashlytics
+
 import DebugKit
 import GoogleMaps
 import NetworkLogger

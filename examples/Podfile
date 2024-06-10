@@ -29,6 +29,14 @@ target "EX" do
     :tag => "0.3.0"
   }
 
+  spm_pkg "Firebase",
+          :url => "https://github.com/firebase/firebase-ios-sdk.git",
+          :version => "8.14.0",
+          :products => [
+            "FirebaseAnalytics",
+            "FirebaseCrashlytics"
+          ]
+
   spm_pkg "SnapKit",
           :url => "https://github.com/SnapKit/SnapKit.git",
           :version => "5.7.1",
