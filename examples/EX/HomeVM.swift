@@ -1,4 +1,3 @@
 import Foundation
 
-final class HomeVM: ObservableObject {
-}
+final class HomeVM: ObservableObject { }
