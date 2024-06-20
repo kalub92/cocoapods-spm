@@ -1,26 +1,26 @@
 PODS:
-  - CommonUI (0.0.1)
+  - AppTestKit (0.0.1):
+    - NetworkTestKit
   - Logger (0.0.1)
-  - Services (0.0.1):
-    - Logger
+  - NetworkTestKit (0.0.1)
 
 DEPENDENCIES:
-  - CommonUI (from `LocalPods/CommonUI`)
+  - AppTestKit (from `LocalPods/AppTestKit`)
   - Logger (from `LocalPods/Logger`)
-  - Services (from `LocalPods/Services`)
+  - NetworkTestKit (from `LocalPods/NetworkTestKit`)
 
 EXTERNAL SOURCES:
-  CommonUI:
-    :path: LocalPods/CommonUI
+  AppTestKit:
+    :path: LocalPods/AppTestKit
   Logger:
     :path: LocalPods/Logger
-  Services:
-    :path: LocalPods/Services
+  NetworkTestKit:
+    :path: LocalPods/NetworkTestKit
 
 SPEC CHECKSUMS:
-  CommonUI: 324efdfd5ca3ba7d6db37604ff86d760171398a2
+  AppTestKit: f821d3ff20c4a77c2b1de595afa4fb0b798d4b06
   Logger: f90a618a457baad1c3f3ee831c723b0b76dc62a8
-  Services: 5d4b4ce9877cac8bb44481806f754d0dd267a55b
+  NetworkTestKit: 5445ea4a065ef6a16dbb89120ad36f670e356629
 
 PODFILE CHECKSUM: dummy-checksum-to-prevent-merge-conflicts
 

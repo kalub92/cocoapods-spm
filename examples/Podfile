@@ -50,6 +50,24 @@ abstract_target 'Example' do
             :version => "8.4.0",
             :products => ["GoogleMaps", "GoogleMapsBase", "GoogleMapsCore"]
     spm_pkg "DebugKit", :path => "LocalPackages/debug-kit"
+
+    spm_pkg "braze-segment-swift",
+        :url => "https://github.com/braze-inc/analytics-swift-braze.git",
+        :version => "2.2.0",
+        :products => [
+          "SegmentBraze",
+          "SegmentBrazeUI"
+        ]
+
+    spm_pkg "Segment",
+        :url => "https://github.com/segmentio/analytics-swift.git",
+        :version => "1.5.11"
+
+    spm_pkg "SegmentFirebase",
+        :url => "https://github.com/segment-integrations/analytics-swift-firebase.git",
+        :version => "1.1.3"
+
+
   end
   
   target "EXTests" do

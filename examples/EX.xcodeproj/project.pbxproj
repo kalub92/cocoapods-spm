@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0439E01D2868E4C0CE50CCE3 /* Pods_Example_EXTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C69418E5A9F6C73C7DF8DB6 /* Pods_Example_EXTests.framework */; };
 		ACF313147CA4F13E05724691 /* Pods_Example_EX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7C8E852768153C37BB78B32 /* Pods_Example_EX.framework */; };
+		D68523952C2498E900735E7F /* ExObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = D68523942C2498E900735E7F /* ExObjC.m */; };
 		F522B5652B280C89009730B4 /* SPMPackagePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = F522B5642B280C89009730B4 /* SPMPackagePlayground.swift */; };
 		F5823AD12BB9575F0054FF0A /* EXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5823AD02BB9575F0054FF0A /* EXTests.swift */; };
 		F58EA02E2BD9F41200867E1A /* StaticResourcesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58EA02D2BD9F41200867E1A /* StaticResourcesTests.swift */; };
@@ -40,6 +41,9 @@
 		B6B228B03A231C4EC3C73B4F /* Pods-EXTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EXTests.debug.xcconfig"; path = "Target Support Files/Pods-EXTests/Pods-EXTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C7C8E852768153C37BB78B32 /* Pods_Example_EX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_EX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D572DB70C2E7F8B16ABC9252 /* Pods-EX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EX.debug.xcconfig"; path = "Target Support Files/Pods-EX/Pods-EX.debug.xcconfig"; sourceTree = "<group>"; };
+		D68523922C2498D700735E7F /* ExObjC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExObjC.h; sourceTree = "<group>"; };
+		D68523932C2498E900735E7F /* EX-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EX-Bridging-Header.h"; sourceTree = "<group>"; };
+		D68523942C2498E900735E7F /* ExObjC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExObjC.m; sourceTree = "<group>"; };
 		D686D8252BF3CD90004FF8CB /* TestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCFC994A44F15042588380D4 /* Pods-EX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EX.release.xcconfig"; path = "Target Support Files/Pods-EX/Pods-EX.release.xcconfig"; sourceTree = "<group>"; };
 		F522B5642B280C89009730B4 /* SPMPackagePlayground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPMPackagePlayground.swift; sourceTree = "<group>"; };
@@ -139,6 +143,9 @@
 				F5A631182B1D912200A958CB /* Preview Content */,
 				F5A631232B1D974400A958CB /* HomeVM.swift */,
 				F5A631252B1D976E00A958CB /* HomeScreen.swift */,
+				D68523922C2498D700735E7F /* ExObjC.h */,
+				D68523942C2498E900735E7F /* ExObjC.m */,
+				D68523932C2498E900735E7F /* EX-Bridging-Header.h */,
 			);
 			path = EX;
 			sourceTree = "<group>";
@@ -209,6 +216,7 @@
 					};
 					F5A6310E2B1D912000A958CB = {
 						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1540;
 					};
 				};
 			};
@@ -357,6 +365,7 @@
 			files = (
 				F5A631152B1D912000A958CB /* ContentView.swift in Sources */,
 				F5A631132B1D912000A958CB /* EXApp.swift in Sources */,
+				D68523952C2498E900735E7F /* ExObjC.m in Sources */,
 				F5A631262B1D976E00A958CB /* HomeScreen.swift in Sources */,
 				F522B5652B280C89009730B4 /* SPMPackagePlayground.swift in Sources */,
 				F5A631242B1D974400A958CB /* HomeVM.swift in Sources */,
@@ -569,6 +578,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"EX/Preview Content\"";
@@ -590,6 +600,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.thuyen.EX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "EX/EX-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -601,6 +613,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"EX/Preview Content\"";
@@ -622,6 +635,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.thuyen.EX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "EX/EX-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
